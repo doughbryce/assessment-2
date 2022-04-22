@@ -35,7 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+
+// console.log(summedPrice);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +57,14 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    tax += 1;
+    cartTotal *= tax;
+    cartTotal -= couponValue;
+    return cartTotal;
+}
 
+// console.log(calcFinalPrice(summedPrice, 2, .07));
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +88,17 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    If i were a market restaurant store, id want to know these things about those buying my items:
+    * how often they come to this store per week
+        * i want to know if they are a regular or not, so i can prioritize their preferences
+    * their name
+        * so I can keep track of who they actually are
+    * their age
+        * so i can more properly predict what kinds of things they might be interested in in the future
+    * their food preferences (top 3 fav)
+        * so i can know what is most important to keep in stock (prioritization)
+    * if they have a dog or not
+        * so i know if i can trust them
 
 */
 
@@ -88,3 +108,15 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    name: `jack johnson`,
+    age: 42,
+    weeklyFrequency: 2,
+    favFood1: `fries`,
+    favFood2: `dark chocolate covered bananas`,
+    favFood3: `burger`,
+    hasDog: true
+}
+
+// console.log(customer)
