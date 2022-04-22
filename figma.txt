@@ -1,0 +1,26 @@
+https://www.figma.com/file/YKi1cmswVvLQ2OskxmmB14/assessment-2?node-id=0%3A1
+
+Amazon:
+
+* i learned that amazon has pretty much every stack there is to offer, and they are just so big they have to use it all
+
+* quote : Mostly JAVA is used as Programming language.
+    * Other technologies used at Amazon are mainly AWS. In AWS mostly teams use SQS, SNS, DynamoDB, S3.
+
+* aws is amazons web services, and that is where most of their technology comes from
+
+
+cloudinary:
+
+* this is the company by dad works for , they use JAM stack development
+    * j stands for java
+    * A stands for API
+    * M stand for markup
+* this is a digital asset management company, meaning they help other companies manage their photos and videos to optimize load times and storage space
+
+apple:
+
+* apple is cool, they have a lot of their own technologies. it seems like they have created a lot of their own tech stacks. they seem to be aiming more towards the monopoly mindset, trying to control and own everything in the line of production
+* swift is the programming language used for the mac OS and iOS operating systems
+* xcode is the software they use to write their applications
+* quote: n Apple, we use a diverse technology stack such as Teradata, SingleStore, Snowflake, Hadoop, Kafka, Spark, React, and Swift.
