@@ -22,7 +22,9 @@
 */
 
 //CODE HERE
+const greetUser = (username) => `welcome back, ${username}`;
 
+// console.log(greetUser(`nick`))
 
 
 
@@ -51,7 +53,9 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = (num, arr) => (arr.includes(num)) ? `you're in the delivery zone` : `you're outside of the delivery zone`;
 
+// console.log(canWeDeliver(852054, deliveryAreaZipCodes));
 
 /* 
     Problem 2 Continued
@@ -71,7 +75,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = (num, arr) => {
+    let checker = false;
+    arr.forEach(elem => {
+        if (elem === num) {
+            checker = true;
+        }
+    });
+    return (checker) ? `you're in the delivery zone` : `you're outside the delivery zone`;
+};
 
+// console.log(canWeDeliverTwo(8520512, deliveryAreaZipCodes));
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,7 +121,9 @@ const deals = [
 */
 
 //CODE HERE
+deals[0].title = deals[0].title.replace(`15`, `10`);
 
+// console.log(deals)
 
 
 /*
@@ -124,3 +140,6 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March`, `April`);
+
+// console.log(deals)
