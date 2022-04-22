@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: `bbq chicken`,
+    price: 16,
+    category: `entree`,
+    popularity: 2,
+    rating: 4.8,
+    tags: [`bbq`, `meat`, `hasVegetables`, `family`, `popular`]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,6 +50,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -53,6 +61,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -63,7 +72,8 @@
 */
 
 //CODE HERE
-
+let {price: pizzaPrice} = pizza
+console.log(pizzaPrice);
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +83,8 @@
 */
 
 //CODE HERE
+let {category} = pizza;
+console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,8 +100,15 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {...pizza, name: `cheese`, price: 17, popularity: 4, rating: 4, tags: [`popular`, `family`, `plain`, `marinera`]},
+    {...pizza, name: `meat lovers`, price: 18, popularity: 3, rating: 4.5, tags: [`popular`, `meat`, `caloric`]},
+    {...pizza, name: `pepperoni`, price: 14, popularity: 1, rating: 5, tags: [`popular`, `family`, `meat`, `marinera`]},
+    {...pizza, name: `margherita`, price: 13, popularity: 6, rating: 5, tags: [`family`, `hasVegetables`, `marinera`]},
+    {...pizza, name: `chicago`, price: 20, popularity: 7, rating: 4.2, tags: [`caloric`, `marinera`, `meat`]}
+]
 
-
+// console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +124,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(obj => obj.tags.includes(`family`))
+
+// console.log(filteredFood)
 
 
 
@@ -149,13 +170,31 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
 
+    let filteredArr = [];
+
+    foodArr.filter(obj => {
+        if(type === `above` && obj[property] > number){
+            filteredArr.push(obj);
+        } else if(type === `below` && obj[property] < number){
+            filteredArr.push(obj);
+        }
+    });
+    
+    return filteredArr;
+}
+
+// let prop = `rating`;
+
+// console.log(foodArr[0][prop]);
 
 /*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+Invoke the `filterByProperty` function passing
+in a value for each paramter.
 
-    You'll have to console.log to see the filtered array
+You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+console.log(filterByProperty(`rating`, 4.6, `above`));
